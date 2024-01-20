@@ -16,6 +16,8 @@ The sections to implement:
 
 # Resulting pages
 
+Browse it [here](https://miguelsaddress.github.io/css-challenges/hotel_website/src/)
+
 ## Main page
 
 ![image](./screenshots/main-page.png)
