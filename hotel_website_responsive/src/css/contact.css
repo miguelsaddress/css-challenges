@@ -1,0 +1,38 @@
+/* Contact Form */
+#contact-form {
+  color: #333;
+}
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+#contact-form textarea {
+  height: 200px;
+  resize: vertical;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  /* when the cursor is in, do not highlight the border at all */
+  outline: none;
+
+  /* but change the border color at least */
+  border-color: #f7c08a;
+}
+
+#contact-details i {
+  margin-bottom: 20px;
+}

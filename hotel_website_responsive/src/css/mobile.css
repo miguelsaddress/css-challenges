@@ -1,0 +1,79 @@
+/* Common */
+
+.box {
+  width: 100%;
+  float: none;
+}
+
+/* 
+  Nav bar
+  - The logo should be centered and menu items stacked
+  - if we added some JS we could make it show and hide somehow
+*/
+
+#nav-bar .logo {
+  float: none;
+  text-align: center;
+}
+
+#nav-bar ul,
+#nav-bar ul li {
+  float: none;
+}
+
+#nav-bar ul li a {
+  /* make elements thinner, so they dont take so much space */
+  padding: 5px;
+  border-bottom: 1px dotted #444;
+}
+
+/* Home Info */
+#showcase {
+  min-height: 0px;
+  height: 100%;
+}
+
+#showcase .showcase-content {
+  padding: 70px 0px;
+}
+
+#home-info .home-info__image {
+  /* 
+    No need to do anything else, as the 
+    display none will remove it from the html
+  */
+  display: none;
+}
+
+#home-info .home-info__content {
+  height: 100%;
+  width: 100%;
+  float: none;
+}
+
+/* ------------------------------ */
+/* --- ABOUT page--- */
+#about .about__content,
+#about .about__image {
+  float: none;
+  width: 100%;
+}
+
+.l-heading {
+  text-align: center;
+}
+
+#about .about__image {
+  margin-top: 30px;
+}
+
+#about .about__image img {
+  border-radius: 20%;
+  width: 100%;
+}
+
+/* ------------------------------ */
+/* --- Contact page--- */
+#contact-details .box {
+  border-bottom: 1px dotted #444;
+}

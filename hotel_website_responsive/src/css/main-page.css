@@ -1,0 +1,69 @@
+/* showcase section */
+#showcase {
+  /*
+    if we added the image inside the showcase-content
+    element instead, it would not cover the 100% of
+    the screen
+  */
+  /* 
+    background-image: url('../img/showcase.jpg'); 
+
+    Would be invalid because "no-repeat center center/cover" belongs to the background porperty,
+    not the background-image property.
+
+    Technically, belong to the background-repeat property
+  */
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
+
+  /* Adjust the height so the image is shown and the section covers more screen space*/
+  min-height: 600px;
+}
+
+#showcase .showcase-content {
+  color: white;
+  text-align: center;
+  padding-top: 180px;
+
+  margin: auto;
+  max-width: 600px;
+}
+
+#showcase .showcase-content h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+/* Home Info */
+#home-info {
+  height: 400px;
+}
+
+#home-info .home-info__image {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background: url('../img/photo-1.jpg') no-repeat;
+}
+
+#home-info .home-info__content {
+  height: 100%;
+  width: 50%;
+  float: right;
+  padding: 50px 30px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#home-info .home-info__content p {
+  padding-bottom: 25px;
+}
+
+/* features section */
+#features .box i {
+  margin-bottom: 10px;
+}
