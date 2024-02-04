@@ -1,0 +1,8 @@
+.hero.blog {
+  height: 30vh;
+  background: url('../img/home/blog.jpg') no-repeat center/cover;
+}
+
+.blog.flex-columns .row .column .column-text .meta h4 {
+  margin: 20px 0px;
+}

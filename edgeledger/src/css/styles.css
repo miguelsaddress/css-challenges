@@ -1,0 +1,255 @@
+/* Open Sans Google Font. Light 300, 400 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* Basic Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  /*
+    so when we have a few of them together, the words
+    are not vertically too far apart from each other
+  */
+  line-height: 1.2;
+}
+
+p {
+  /* as we removed everything in the reset above */
+  margin: 10px 0;
+}
+
+img {
+  /* fill up the width of their container by default */
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  /* Flex settings */
+  display: flex;
+  flex-direction: row;
+  /* center them vertically in the flexbox */
+  align-items: center;
+  /* fill the space between the elements up, so they are pushed to the sides*/
+  justify-content: space-between;
+
+  /* Colors */
+  background-color: #333;
+  color: white;
+  opacity: 0.8;
+
+  /* Sizing */
+  /* Fill the width of the page*/
+  width: 100%;
+  /* 70px is a common height for a navbar */
+  height: 70px;
+
+  /* Positioning */
+  /* The navbar will be always in the top of the page */
+  position: fixed;
+  /* ensure there is no space on top */
+  top: 0px;
+  padding: 0px 30px;
+
+  /* 
+  Take this time to transition when the navbar is 
+  being pulled up by the transformY in the script
+  */
+  transition: 0.5s;
+
+  /* li elements contain anchors */
+  a {
+    color: white;
+    padding: 10px 20px;
+    margin: 0px 5px;
+  }
+
+  a:hover {
+    border-bottom: 2px solid #28a745;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .logo {
+    font-weight: 400;
+  }
+}
+
+.navbar.top {
+  background-color: transparent;
+}
+
+.hero {
+  background: url('../img/home/showcase.jpg') no-repeat center center/cover;
+
+  /* Fill up all the viewport */
+  height: 100vh;
+
+  position: relative;
+  color: white;
+
+  .content {
+    /* 100% of its container, which is .hero and has 100vh */
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* just in case, in smaller screens, so its not right on the side */
+    padding: 0px 20px;
+
+    h1 {
+      font-size: 55px;
+    }
+
+    p {
+      font-size: 23px;
+      /* avoid the paragraph to extend to much */
+      max-width: 600px;
+      margin: 20px 0px 30px;
+    }
+  }
+}
+
+/* Overlay */
+.hero::before {
+  content: '';
+  /* absolute within the hero. That is why it is styled as position: relative */
+  position: absolute;
+  /* start from the very corner */
+  top: 0;
+  left: 0;
+
+  /* And take the whole space */
+  width: 100%;
+  height: 100%;
+
+  /* black overlay but we make it 60% opacity */
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* The overlay is on top of all the content, so we bring the content on top */
+.hero * {
+  z-index: 1;
+}
+
+/* Icons section */
+.icons {
+  padding: 30px;
+  h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  i {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem; /* 16px by default unless root font size was changed */
+    margin-bottom: 15px;
+    border-radius: 50%;
+  }
+}
+
+.cases {
+  img:hover {
+    opacity: 0.7;
+  }
+
+  .flex-grid .row {
+    display: flex;
+    flex-direction: row;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0px 4px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: 200px;
+  .social-icons {
+    margin-top: 20px;
+    a {
+      color: white;
+    }
+    i {
+      margin: 15px;
+    }
+    i:hover {
+      color: #28a745;
+    }
+  }
+  p {
+    padding-bottom: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+
+    a {
+      margin: 0px 3px;
+      padding: 10px;
+    }
+  }
+  .content {
+    text-align: center;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-columns .row .column,
+  .flex-grid .row .column {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .team img {
+    width: 70%;
+  }
+}
